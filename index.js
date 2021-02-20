@@ -5,10 +5,10 @@ const app = express();
 var urlencoderparser = bodyp.urlencoded({extended: false})
 
 app.post("/send", urlencoderparser, (req, res)=>{
-//    let mail = req.body.email
-//    let name = req.body.name
-    console.log(req)
-//    res.send(`Nombre: ${name} \nEmail: ${mail}`)
+    let mail = req.body.email
+    let name = req.body.name
+    console.log(req.body)
+    res.send(`Nombre: ${name} \nEmail: ${mail}`)
 })
 
 app.listen(process.env.PORT || 3000, ()=>{
