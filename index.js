@@ -8,7 +8,7 @@ app.post("/send", urlencoderparser, (req, res)=>{
     let mail = req.body.email
     let name = req.body.name
     console.log(`Nombre: ${name} \nEmail: ${mail}`)
-    res.redirect("https://github.com")
+    res.send("`Nombre: ${name} \nEmail: ${mail}`")
 })
 
 app.listen(process.env.PORT || 3000, ()=>{
