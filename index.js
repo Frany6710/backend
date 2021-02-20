@@ -19,7 +19,7 @@ app.post("/send", (req, res) => {
     let mail = req.body.email
     let name = req.body.name
     console.log(req.body)
-    res.send(`Nombre: ${name} \nEmail: ${mail}`)
+    res.redirect("https://frany6710.github.io/myPage/index.html")
     var mailOptions = {
         from: "Sistema de mails automaticos de frany6710 <automaticmail.frany6710@gmail.com>",
         to: mail,
