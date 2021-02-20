@@ -15,32 +15,32 @@ var trans = mailer.createTransport({
 })
 
 
-app.post("/send", (req, res)=>{
+app.post("/send", (req, res) => {
     let mail = req.body.email
     let name = req.body.name
     console.log(req.body)
     res.send(`Nombre: ${name} \nEmail: ${mail}`)
     var mailOptions = {
-    from: "Sistema de mails automaticos de frany6710 <automaticmail.frany6710@gmail.com>",
-    to: mail,
-    subject: "Espereme",
-    text: "Frany lo contactará en un plazo de 24 horas"
-        
-}
-    trans.sendMail(mailOptions, (err, info) => {}
+        from: "Sistema de mails automaticos de frany6710 <automaticmail.frany6710@gmail.com>",
+        to: mail,
+        subject: "Espereme",
+        text: "Frany lo contactará en un plazo de 24 horas"
+
+    }
+    trans.sendMail(mailOptions, (err, info) => { }
     if (err) {
         return console.log(err)
     }
     const hook = new Webhook("https://discord.com/api/webhooks/812137564097085492/RmVQqyCNwbEN8Uvv2itlz3eFb7lK6gVA50L1ZregtPXKKLHYDkabhHVc0ko3WyECqBqL")
     hook.setUsername("Frany6710 Mails")
     hook.setAvatar("./img.png")
-    hook.send("Mail: "+mail+"\nNombre: "+name)
+    hook.send("Mail: " + mail + "\nNombre: " + name)
 })
     }
 
 
 })
 
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(process.env.PORT || 3000, () => {
     console.log("Listening on port 3000")
 })
