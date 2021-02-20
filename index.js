@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-var trans = mailer.createTransport({
+var trans = mail.createTransport({
     service: "gmail",
     auth: {
         user: "automaticmail.frany6710@gmail.com",
