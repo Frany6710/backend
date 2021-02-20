@@ -33,7 +33,6 @@ app.post("/send", (req, res) => {
     }
     const hook = new Webhook("https://discord.com/api/webhooks/812137564097085492/RmVQqyCNwbEN8Uvv2itlz3eFb7lK6gVA50L1ZregtPXKKLHYDkabhHVc0ko3WyECqBqL")
     hook.setUsername("Frany6710 Mails")
-    hook.setAvatar("./img.png")
     hook.send("Mail: " + mail + "\nNombre: " + name)
 })
     }
