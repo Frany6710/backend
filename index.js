@@ -14,6 +14,9 @@ var trans = mail.createTransport({
     }
 })
 
+app.get("/online", (req,res) => {
+    res.send("online")
+})
 
 app.post("/send", (req, res) => {
     let mail = req.body.email
