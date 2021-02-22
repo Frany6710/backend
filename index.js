@@ -10,7 +10,7 @@ var trans = mail.createTransport({
     service: "gmail",
     auth: {
         user: "automaticmail.frany6710@gmail.com",
-        pass: "gatonto18"
+        pass: ""
     }
 })
 
